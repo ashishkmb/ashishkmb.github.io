@@ -14,13 +14,14 @@ export class StandaloneLaunchComponent implements OnInit {
     FHIR.oauth2
       .authorize({
         client_id: '3e24eea1-8af9-4304-ad71-be790b06ad4f',
-        scope: 'patient/*.read',
-        iss:
-          'https://fhir-ehr.sandboxcerner.com/dstu2/0b8a0111-e8e6-4c26-a91c-5069cbc6b1ca',
+        scope: 'patient/*.read, ',
+        iss: 'https://launch.smarthealthit.org/v/r3/sim/eyJoIjoiMSJ9/fhir',
+        redirectUri: 'http://localhost:4200/index'
       })
       .then(
         (data) => {
           console.log('oauth');
+          console.log(data);
         },
         (error) => {
           console.log(error);

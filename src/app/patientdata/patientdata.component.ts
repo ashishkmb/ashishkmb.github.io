@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import * as FHIR from 'fhirclient';
+import { Subject } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { RootObject } from '../Model/patientdata';
 
 @Component({
   selector: 'app-patientdata',
@@ -7,6 +10,8 @@ import * as FHIR from 'fhirclient';
   styleUrls: ['./patientdata.component.scss'],
 })
 export class PatientdataComponent implements OnInit {
+ 
+  FHIRClients: RootObject;
   constructor() {}
 
   ngOnInit(): void {
@@ -14,7 +19,12 @@ export class PatientdataComponent implements OnInit {
     FHIR.oauth2
       .ready()
       .then((client) => client.request('Patient'))
-      .then(console.log)
+      .then((result) => this.mapData(result))
       .catch(console.error);
+  }
+
+  mapData(result) {
+    this.FHIRClients = result;
+    console.log(this.FHIRClients);
   }
 }
