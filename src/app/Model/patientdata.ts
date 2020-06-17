@@ -1,4 +1,4 @@
-export interface RootObject {
+export interface PatientDetails {
   resourceType: string;
   id: string;
   meta: Meta;

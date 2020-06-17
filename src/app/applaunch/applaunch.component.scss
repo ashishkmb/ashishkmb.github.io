@@ -1,0 +1,322 @@
+
+// body {
+//   font-family: "Open Sans", sans-serif;
+//   color: #444444;
+// }
+
+// a {
+//   color: #fd680e;
+// }
+
+
+// h1, h2, h3, h4, h5, h6, .font-primary {
+//   font-family: "Raleway", sans-serif;
+// }
+
+// /*--------------------------------------------------------------
+// # Header
+// --------------------------------------------------------------*/
+// #header {
+//   height: 80px;
+//   padding: 20px 0;
+//   z-index: 10;
+//   position: relative;
+// }
+
+// #header .logo h1 {
+//   font-size: 36px;
+//   margin: 0;
+//   padding: 0;
+//   line-height: 1;
+//   font-weight: 300;
+//   letter-spacing: 3px;
+// }
+
+// #header .logo h1 a, #header .logo h1 a:hover {
+//   color: #fff;
+//   text-decoration: none;
+// }
+
+// #header .logo img {
+//   padding: 0;
+//   margin: 0;
+//   max-height: 40px;
+// }
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+  width: 100%;
+  height: 112vh;
+  background: url("../../assets/images/hero-bg.jpg") center center;
+  background-size: cover;
+  position: relative;
+  margin-top: -80px;
+  z-index: 9;
+}
+
+#hero .hero-container {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 15px;
+}
+
+// #hero h1 {
+//   margin: 0 0 10px 0;
+//   font-size: 48px;
+//   font-weight: 400;
+//   line-height: 56px;
+//   line-height: 56px;
+//   color: #222;
+// }
+
+// #hero h2 {
+//   color: #333;
+//   margin-bottom: 30px;
+//   font-size: 24px;
+// }
+
+// #hero .launch-form .validate {
+//   display: none;
+//   color: red;
+//   margin: 0 0 15px 0;
+//   font-weight: 400;
+//   font-size: 13px;
+// }
+
+// #hero .launch-form .error-message {
+//   display: none;
+//   color: #fff;
+//   background: #ed3c0d;
+//   text-align: center;
+//   padding: 15px;
+//   font-weight: 600;
+// }
+
+// #hero .launch-form .sent-message {
+//   display: none;
+//   color: #fff;
+//   background: #18d26e;
+//   text-align: center;
+//   padding: 15px;
+//   font-weight: 600;
+// }
+
+// #hero .launch-form .loading {
+//   display: none;
+//   background: rgba(255, 255, 255, 0.5);
+//   text-align: center;
+//   padding: 15px;
+//   border-radius: 50px;
+// }
+
+// #hero .launch-form .loading:before {
+//   content: "";
+//   display: inline-block;
+//   border-radius: 50%;
+//   width: 24px;
+//   height: 24px;
+//   margin: 0 10px -6px 0;
+//   border: 3px solid #18d26e;
+//   border-top-color: #eee;
+//   -webkit-animation: animate-loading-notify 1s linear infinite;
+//   animation: animate-loading-notify 1s linear infinite;
+// }
+
+// #hero .launch-form input {
+//   border-radius: 50px;
+//   box-shadow: none;
+//   font-size: 14px;
+//   border: 0;
+//   padding: 0px 15px 2px 20px;
+//   width: 250px;
+//   height: 40px;
+//   margin: 0 8px;
+// }
+
+#hero .launch-form button[type="submit"] {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px;
+  border: none;
+  color: #fff;
+  background: #fd680e;
+}
+
+#hero .launch-form button[type="submit"]:hover {
+  background: #fd8841;
+}
+
+.launch-button{
+  background: #fd8841;
+}
+// @media (min-width: 1024px) {
+//   #hero {
+//     background-attachment: fixed;
+//   }
+// }
+
+// @media (max-width: 768px) {
+//   #hero h1 {
+//     font-size: 28px;
+//     line-height: 36px;
+//   }
+//   #hero h2 {
+//     font-size: 18px;
+//     line-height: 24px;
+//     margin-bottom: 30px;
+//   }
+//   #hero .launch-form input {
+//     margin: 0 auto;
+//   }
+// }
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  padding: 80px 0;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  position: relative;
+ }
+
+// .contact .launch-form .validate {
+//   display: none;
+//   color: red;
+//   margin: 0 0 15px 0;
+//   font-weight: 400;
+//   font-size: 13px;
+// }
+
+// .contact .launch-form .error-message {
+//   display: none;
+//   color: #fff;
+//   background: #ed3c0d;
+//   text-align: left;
+//   padding: 15px;
+//   font-weight: 600;
+// }
+
+// .contact .launch-form .error-message br + br {
+//   margin-top: 25px;
+// }
+
+// .contact .launch-form .sent-message {
+//   display: none;
+//   color: #fff;
+//   background: #18d26e;
+//   text-align: center;
+//   padding: 15px;
+//   font-weight: 600;
+// }
+
+// .contact .launch-form .loading {
+//   display: none;
+//   background: #fff;
+//   text-align: center;
+//   padding: 15px;
+// }
+
+// .contact .launch-form .loading:before {
+//   content: "";
+//   display: inline-block;
+//   border-radius: 50%;
+//   width: 24px;
+//   height: 24px;
+//   margin: 0 10px -6px 0;
+//   border: 3px solid #18d26e;
+//   border-top-color: #eee;
+//   -webkit-animation: animate-loading 1s linear infinite;
+//   animation: animate-loading 1s linear infinite;
+// }
+
+// .contact .launch-form input, .contact .launch-form textarea {
+//   border-radius: 0;
+//   box-shadow: none;
+//   font-size: 14px;
+// }
+
+// .contact .launch-form input:focus, .contact .launch-form textarea:focus {
+//   border-color: #fd680e;
+// }
+
+// .contact .launch-form button[type="submit"] {
+//   background: #fd680e;
+//   border: 0;
+//   padding: 10px 24px;
+//   color: #fff;
+//   transition: 0.4s;
+// }
+
+// .contact .launch-form button[type="submit"]:hover {
+//   background: #fd8841;
+// }
+
+body{
+  background: #16a085;
+ }
+.content{
+  width: 450px;
+  height: auto;
+  margin: 0 auto;
+  padding: 30px;
+}
+.nav-pills{
+  width: 450px;
+}
+.nav-item{
+  width: 50%;
+}
+.nav-pills .nav-link{
+  font-weight: bold;
+  padding-top: 13px;
+  text-align: center;
+  background: #343436;
+  color: #fff;
+  border-radius: 30px;
+  height: 100px;
+}
+.nav-pills .nav-link.active{
+  background: #fff;
+  color: #000;
+}
+.tab-content{
+  position: absolute;
+  width: 450px;
+  height: auto;
+  margin-top: -50px;
+  background: #fff;
+  color: #000;
+  border-radius: 30px;
+  z-index: 1000;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4);
+  padding: 30px;
+  margin-bottom: 50px;
+}
+.tab-content button{
+  border-radius: 15px;
+  width: 100px;
+  margin: 0 auto;
+  float: right;
+}

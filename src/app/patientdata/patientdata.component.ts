@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import * as FHIR from 'fhirclient';
-import { Subject } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
-import { RootObject } from '../Model/patientdata';
+import { ActivatedRoute, Params } from '@angular/router';
+import { NgxSpinnerService } from 'ngx-spinner';
+import { CernerData } from '../Model/cernerresponse';
 
 @Component({
   selector: 'app-patientdata',
@@ -10,21 +10,41 @@ import { RootObject } from '../Model/patientdata';
   styleUrls: ['./patientdata.component.scss'],
 })
 export class PatientdataComponent implements OnInit {
- 
-  FHIRClients: RootObject;
-  constructor() {}
+  public FHIRpatient: CernerData;
+  public patientid: string;
+  public cernerResponse;
+  constructor(
+    private route: ActivatedRoute,
+    public SpinnerService: NgxSpinnerService
+  ) {}
 
   ngOnInit(): void {
-    (window as any).FHIR = FHIR;
-    FHIR.oauth2
-      .ready()
-      .then((client) => client.request('Patient'))
-      .then((result) => this.mapData(result))
-      .catch(console.error);
+    this.SpinnerService.show();
+    this.route.params.subscribe((params: Params) => {
+      this.patientid = params.id;
+    });
+    this.GetPatientData();
   }
 
-  mapData(result) {
-    this.FHIRClients = result;
-    console.log(this.FHIRClients);
+  async GetPatientData() {
+    try {
+      (window as any).FHIR = FHIR;
+      this.cernerResponse = await (await FHIR.oauth2.ready()).request(
+        `Patient?_id=${this.patientid}`
+      );
+      // this.cernerResponse = await (await FHIR.oauth2.ready()).request(
+      //   `Patient?given=Jason&family=Argonaut`
+      // );
+      if (this.cernerResponse) {
+        this.FHIRpatient = this.cernerResponse;
+        this.SpinnerService.hide();
+      }
+      else{
+        this.SpinnerService.hide();
+      }
+    } catch (Error) {
+      console.log(Error);
+      this.SpinnerService.hide();
+    }
   }
 }

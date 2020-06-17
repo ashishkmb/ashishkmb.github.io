@@ -1,0 +1,7 @@
+{
+    "/api/*": {
+        "target": "https://uscdi.epic.com/Test/Smart",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>SMART ON APP</title>
+</head>
+
+<body>
+    <section id="hero">
+        <!-- <ul class="nav nav-tabs md-tabs nav-justified">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#account_panel_Profile" role="tab"
+                    aria-controls="account_panel_Profile">Profile</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#account_panel_Settings" role="tab"
+                    aria-controls="account_panel_Settings">Settings</a>
+            </li>
+        </ul>
+        <div class="hero-container">
+            <h1>Welcome To SMART On FHIR App</h1>
+            <h2>Please, fill out the for below details to launch SMART On FHIR App!</h2>
+            <form role="form" class="launch-form">
+                <div class="row no-gutters">
+                    <div class="col-md-6 form-group pr-md-1">
+                        <input type="text" name="username" class="form-control" id="name" placeholder="User Name" />
+                    </div>
+                    <div class="col-md-6 form-group pl-md-1">
+                        <input type="password" class="form-control" name="password" id="email" placeholder="Password" />
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button type="submit" (click)='onLaunch()'>Launch App!</button>
+                </div>
+            </form>
+        </div> -->
+        <div class="content">
+            <!-- Nav pills -->
+            <ul class="nav nav-pills" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" data-toggle="pill" href="#login">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="pill" href="#regis">Register</a>
+              </li>
+            </ul>
+        
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div id="login" class="container tab-pane active">
+                <form>
+                  <div class="form-group">
+                    <label for="exampleFormControlInput1">Email address</label>
+                    <input type="email" class="form-control " id="exampleFormControlInput1" placeholder="name@example.com">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control " id="exampleInputPassword1" placeholder="Password">
+                  </div>
+                  <button type="submit" class="btn launch-button" (click)='onLaunch()'>Submit</button>
+                </form>
+              </div>
+              <div id="regis" class="container tab-pane fade">
+                <form>
+                  <div class="form-group">
+                    <label for="InputName">Full Name</label>
+                    <input type="text" class="form-control " id="InputName" placeholder="Full Name">
+                  </div>
+                  <div class="form-group">
+                    <label for="InputUsername">Username</label>
+                    <input type="text" class="form-control " id="InputUsername" placeholder="Username">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlInput2">Email address</label>
+                    <input type="email" class="form-control " id="exampleFormControlInput2" placeholder="name@example.com">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword2">Password</label>
+                    <input type="password" class="form-control " id="exampleInputPassword2" placeholder="Password">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPasswordVer">Verify Password</label>
+                    <input type="password" class="form-control " id="exampleInputPasswordVer" placeholder="Password">
+                  </div>
+                  <button type="submit" class="btn  launch-button" (click)='onLaunch()'>Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+    </section><!-- #hero -->
+</body>
+
+</html>

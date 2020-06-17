@@ -1,121 +1,127 @@
-<div class="container mt-3 mb-3">
-    <div class="row">
-        <div class="col-md-2 ">
-        </div>
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-12 panel panel-primary">
-                            <h4>Patient Profile</h4>
-                            <hr>
+<ng-container *ngIf="FHIRpatient">
+    <section id="hero">
+        <div class="container mt-3 mb-3" >
+            <div class="row">
+                <div class="col-md-2 ">
+                </div>
+                <div class="col-md-8">
+                    <div class="card" style="background-color:#edc951">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-12 ">
+                                    <h4>Patient Profile</h4>
+                                    <hr>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <form>
+                                        <div class="form-group row">
+                                            <label class="heading col-3 col-form-label">MRN</label>
+                                            <label class="col-1 col-form-label">:</label>
+                                            <div class="col-8">
+                                                <input class="form-control here text-box" disabled=true type="text"
+                                                    value="{{FHIRpatient.id}}">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="name" class="heading col-3 col-form-label">First Name</label>
+                                            <label class="col-1 col-form-label">:</label>
+                                            <div class="col-8">
+                                                <input class="form-control here text-box" disabled=true type="text"
+                                                    value="{{FHIRpatient.entry[0].resource.name[0].given[0]}}">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="lastname" class="heading col-3 col-form-label">Last Name</label>
+                                            <label class="col-1 col-form-label">:</label>
+                                            <div class="col-8">
+                                                <input class="form-control here text-box" disabled=true type="text"
+                                                    value="{{FHIRpatient.entry[0].resource.name[0].family}}">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="select" class="heading col-3 col-form-label">Gender</label>
+                                            <label class="col-1 col-form-label">:</label>
+                                            <div class="col-8">
+                                                <input class="form-control here text-box" disabled=true type="text"
+                                                    value="{{FHIRpatient.entry[0].resource.gender}}">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="email" class="heading col-3 col-form-label">DOB</label>
+                                            <label class="col-1 col-form-label">:</label>
+                                            <div class="col-8">
+                                                <input class="form-control here text-box" disabled=true type="text"
+                                                    value="{{FHIRpatient.entry[0].resource.birthDate}}">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="website" class="heading col-3 col-form-label">Phone</label>
+                                            <label class="col-1 col-form-label">:</label>
+                                            <div class="col-8">
+                                                <input class="form-control here text-box" disabled=true type="text"
+                                                    value="{{FHIRpatient.entry[0].resource.telecom[0].value}}">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="website" class="heading col-3 col-form-label">Address Line 1</label>
+                                            <label class="col-1 col-form-label">:</label>
+                                            <div class="col-8">
+                                                <input class="form-control here text-box" disabled=true type="text"
+                                                    value="{{FHIRpatient.entry[0].resource.contact[0].address.line[0]}}">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="website" class="heading col-3 col-form-label">City</label>
+                                            <label class="col-1 col-form-label">:</label>
+                                            <div class="col-8">
+                                                <input class="form-control here text-box" disabled=true type="text"
+                                                    value="{{FHIRpatient.entry[0].resource.contact[0].address.city}}">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="website" class="heading col-3 col-form-label">State</label>
+                                            <label class="col-1 col-form-label">:</label>
+                                            <div class="col-8">
+                                                <input class="form-control here text-box" disabled=true type="text"
+                                                    value="{{FHIRpatient.entry[0].resource.contact[0].address.state}}">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="website" class="heading col-3 col-form-label">Country</label>
+                                            <label class="col-1 col-form-label">:</label>
+                                            <div class="col-8">
+                                                <input class="form-control here text-box" disabled=true type="text"
+                                                    value="{{FHIRpatient.entry[0].resource.contact[0].address.country}}">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="website" class="heading col-3 col-form-label">Pincode</label>
+                                            <label class="col-1 col-form-label">:</label>
+                                            <div class="col-8">
+                                                <input class="form-control here text-box" disabled=true type="text"
+                                                    value="{{FHIRpatient.entry[0].resource.contact[0].address.postalCode}}">
+                                            </div>
+                                        </div>
+    
+                                    </form>
+                                </div>
+                            </div>
+    
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <form>
-                                <div class="form-group row">
-                                    <label class="col-3 col-form-label">MRN</label>
-                                    <label class="col-1 col-form-label">:</label>
-                                    <div class="col-8">
-                                        <input class="form-control here" disabled=true type="text"
-                                            value="{{FHIRClients.entry[0].resource.id}}">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="name" class="col-3 col-form-label">First Name</label>
-                                    <label class="col-1 col-form-label">:</label>
-                                    <div class="col-8">
-                                        <input class="form-control here" disabled=true type="text"
-                                            value="{{FHIRClients.entry[0].resource.name[0].given[0]}}">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="lastname" class="col-3 col-form-label">Last Name</label>
-                                    <label class="col-1 col-form-label">:</label>
-                                    <div class="col-8">
-                                        <input class="form-control here" disabled=true type="text"
-                                            value="{{FHIRClients.entry[0].resource.name[0].family}}">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="select" class="col-3 col-form-label">Gender</label>
-                                    <label class="col-1 col-form-label">:</label>
-                                    <div class="col-8">
-                                        <input class="form-control here" disabled=true type="text"
-                                            value="{{FHIRClients.entry[0].resource.gender}}">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="email" class="col-3 col-form-label">DOB</label>
-                                    <label class="col-1 col-form-label">:</label>
-                                    <div class="col-8">
-                                        <input class="form-control here" disabled=true type="text"
-                                            value="{{FHIRClients.entry[0].resource.birthDate}}">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="website" class="col-3 col-form-label">Phone</label>
-                                    <label class="col-1 col-form-label">:</label>
-                                    <div class="col-8">
-                                        <input class="form-control here" disabled=true type="text"
-                                            value="{{FHIRClients.entry[0].resource.telecom[0].value}}">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="website" class="col-3 col-form-label">Address Line 1</label>
-                                    <label class="col-1 col-form-label">:</label>
-                                    <div class="col-8">
-                                        <input class="form-control here" disabled=true type="text"
-                                            value="{{FHIRClients.entry[0].resource.address[0].line}}">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="website" class="col-3 col-form-label">City</label>
-                                    <label class="col-1 col-form-label">:</label>
-                                    <div class="col-8">
-                                        <input class="form-control here" disabled=true type="text"
-                                            value="{{FHIRClients.entry[0].resource.address[0].city}}">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="website" class="col-3 col-form-label">State</label>
-                                    <label class="col-1 col-form-label">:</label>
-                                    <div class="col-8">
-                                        <input class="form-control here" disabled=true type="text"
-                                            value="{{FHIRClients.entry[0].resource.address[0].state}}">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="website" class="col-3 col-form-label">Country</label>
-                                    <label class="col-1 col-form-label">:</label>
-                                    <div class="col-8">
-                                        <input class="form-control here" disabled=true type="text"
-                                            value="{{FHIRClients.entry[0].resource.address[0].country}}">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="website" class="col-3 col-form-label">Pincode</label>
-                                    <label class="col-1 col-form-label">:</label>
-                                    <div class="col-8">
-                                        <input class="form-control here" disabled=true type="text"
-                                            value="{{FHIRClients.entry[0].resource.address[0].postalCode}}">
-                                    </div>
-                                </div>
-
-                            </form>
-                        </div>
-                    </div>
-
+                </div>
+                <div class="col-md-2 ">
                 </div>
             </div>
         </div>
-        <div class="col-md-2 ">
-        </div>
-    </div>
-</div>
+    </section>
+   
+</ng-container>
 
-<!-- <div class="panel panel-primary">
-    <div class="panel-heading">Panel with panel-primary class</div>
-    <div class="panel-body">Panel Content</div>
-  </div> -->
+<div *ngIf="SpinnerService">
+    <ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="default" type="ball-spin-clockwise">
+        <p style="color: white">Please Wait. </p>
+    </ngx-spinner>
+</div>
